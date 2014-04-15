@@ -1,0 +1,7 @@
+	<h1> Rainforest Products </h1>
+	<%= link_to "New Product", new_product_path %>
+
+	<% @products.each do |product| %>
+	<p> <%= link_to product.name, product_path(product) %>, <%= product[:description] %>, <%= product[:price_in_cents]%>, 
+	</p>
+	<% end %>
